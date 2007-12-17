@@ -15,7 +15,6 @@ Source:		http://search.cpan.org/CPAN/authors/id/U/UR/URI/%{module}-%{version}.ta
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module provides subs that allow you to read or write entire files with one
