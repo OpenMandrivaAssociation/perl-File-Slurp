@@ -1,7 +1,7 @@
 %define	module	File-Slurp
 %define name	perl-%{module}
-%define	version	9999.12
-%define	release	%mkrel 3
+%define	version	9999.13
+%define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -10,7 +10,7 @@ Summary:	Efficient Reading/Writing of Complete Files
 Group:		Development/Perl
 License:	GPL or Artistic
 Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://search.cpan.org/CPAN/authors/id/U/UR/URI/%{module}-%{version}.tar.bz2
+Source:     http://www.cpan.org/modules/by-module/File/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
