@@ -1,5 +1,5 @@
 %define	upstream_name	 File-Slurp
-%define	upstream_version 9999.13
+%define	upstream_version 9999.14
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
