@@ -1,19 +1,20 @@
 %define	upstream_name	 File-Slurp
 %define	upstream_version 9999.19
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	6
 
 Summary:	Efficient Reading/Writing of Complete Files
 Group:		Development/Perl
 License:	GPL+ or Artistic
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://www.cpan.org/modules/by-module/File/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:		http://www.cpan.org/modules/by-module/File/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires:	perl-JSON-PP
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+
 
 %description
 This module provides subs that allow you to read or write entire files with one
@@ -33,18 +34,13 @@ chmod 644 lib/File/Slurp.pm
 %make
 
 %check
-%{__make} test
+make test
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 find %{buildroot} -name "perllocal.pod" | xargs -i rm -f {}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README Changes
 %{_mandir}/man3*/*
 %{perl_vendorlib}/File
@@ -83,7 +79,7 @@ rm -rf %{buildroot}
 + Revision: 648087
 - update to new version 9999.14
 
-* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 9999.130.0-1mdv2010.1
+* Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 9999.130.0-1mdv2010.1
 + Revision: 403180
 - rebuild using %%perl_convert_version
 
@@ -133,18 +129,18 @@ rm -rf %{buildroot}
 * Tue Nov 16 2004 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 9999.06-1mdk
 - 9999.06
 
-* Wed Apr 21 2004 Per �yvind Karlsen <peroyvind@linux-mandrake.com> 9999.04-1mdk
+* Wed Apr 21 2004 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 9999.04-1mdk
 - 9999.04
 - correct license
 - spec cosmetics
 
-* Thu Aug 14 2003 Per �yvind Karlsen <peroyvind@linux-mandrake.com> 2002.1031-3mdk
+* Thu Aug 14 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 2002.1031-3mdk
 - rebuild for new perl
 - macroize
 - drop $RPM_OPT_FLAGS, noarch..
 - use %%makeinstall_std macro
 
-* Fri Jul 18 2003 Per �yvind Karlsen <peroyvind@sintrax.net> 2002.1031-2mdk
+* Fri Jul 18 2003 Per Øyvind Karlsen <peroyvind@sintrax.net> 2002.1031-2mdk
 - buildrequires
 
 * Thu Jun 26 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 2002.1031-1mdk
