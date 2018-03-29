@@ -1,10 +1,12 @@
 %define	modname	File-Slurp
 %define	modver	9999.19
+# Avoid circular dependency
+%define dont_gprintify 1
 
 Summary:	Efficient Reading/Writing of Complete Files
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	20
+Release:	21
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -35,10 +37,9 @@ make test
 
 %install
 %makeinstall_std
-find %{buildroot} -name "perllocal.pod" | xargs -i rm -f {}
+find %{buildroot} -name "perllocal.pod" -o -name .packlist | xargs -i rm -f {}
 
 %files
 %doc README Changes
 %{perl_vendorlib}/File
 %{_mandir}/man3*/*
-
