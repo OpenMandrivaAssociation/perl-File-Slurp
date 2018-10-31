@@ -6,7 +6,7 @@
 Summary:	Efficient Reading/Writing of Complete Files
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	21
+Release:	22
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		http://search.cpan.org/dist/%{modname}/
