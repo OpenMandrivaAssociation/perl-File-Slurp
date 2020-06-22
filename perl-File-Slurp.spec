@@ -1,5 +1,5 @@
 %define	modname	File-Slurp
-%define	modver	9999.25
+%define	modver	9999.30
 # Avoid circular dependency
 %define dont_gprintify 1
 
