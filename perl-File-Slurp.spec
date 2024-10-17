@@ -9,7 +9,7 @@ Version:	%perl_convert_version %{modver}
 Release:	4
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
-Url:		http://metacpan.org/pod/File::Slurp
+Url:		https://metacpan.org/pod/File::Slurp
 Source0:	http://www.cpan.org/modules/by-module/File/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
