@@ -6,7 +6,7 @@
 Summary:	Efficient Reading/Writing of Complete Files
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	4
+Release:	5
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
 Url:		https://metacpan.org/pod/File::Slurp
