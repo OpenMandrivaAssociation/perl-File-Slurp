@@ -5,12 +5,12 @@
 
 Summary:	Efficient Reading/Writing of Complete Files
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	5
+Version:	%{modver}
+Release:	6
 Group:		Development/Perl
 License:	GPLv2+ or Artistic
-Url:		https://metacpan.org/pod/File::Slurp
-Source0:	http://www.cpan.org/modules/by-module/File/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/perhunter/slurp
+Source0:	https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/File-Slurp-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
